@@ -3,10 +3,53 @@ Notes and Things that Need to be Done for LPR2:
 SCOPE: To start, focus on constructors and append functions for datastructures before moving on
 to gdb and memcheck tasks given for lpr2. If done and all tools/goals are accomplished, implement the last 3 functions for Lpr1
 
-
-Support profiling: add -pg flags to 
-                   add target to run gprof on main and put output in 
-
 Edit the existing coverage target to take the terminal output and put at top of .txt file:
   -should look like: gcov -src.c > filename.txt
                      cat rsc.c.gcov >> filename.txt
+
+TASK LIST FIRST TO LAST:
+  -finish datastructure definition 
+
+  -On Seperate Branch: add constructer method defs to defs.h
+                       stub out constructors in src.c
+                       make opaque tests for constructors calling the constructor and check:
+                          -returned pointer not null 
+                          -head and tail pointers null
+                          -next ptrs null
+                          -if given var to set in struct, make sure its equal to the input
+                        Once done, run tests, put output in file and commit and push 
+                        implement functions in src file and run tests, put output in file, commit and push
+
+-On same branch as last: repeat process for append functions
+                         check (through top most structure i.e book ptrs for addRecipe):
+                              -head AND TAIL
+                              -head and tail ptr values
+                         
+                        
+                      
+
+
+-After merging into main from opaque testing branch run gcov and put output in .txt file
+ until 100% coverage :
+    -write transparent tests to achieve full coverage, show test output, coverage and output for eaxch new test and commit and push
+
+-After 100% coverage: add another transparent test using all available functions and testing any possible edge cases 
+  add test output to file. commit, push, and merge into main
+
+-Begin profiling: change code to show output changing.
+
+
+
+
+LPR2:
+  -use gdb for bugs and create github issue when finidng one. Link the issue to trello card
+  -when finishing bug use fix#'issue number" in commit message and push and merge to main
+    copy paste commit hash into comment of issue to link it to the commit
+  -*****Easier to debug with gdb in main: put tests semantics in main and run make main,
+
+  -memcheck:
+  
+
+
+                          
+  
