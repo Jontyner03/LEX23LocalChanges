@@ -1,0 +1,12 @@
+Notes and Things that Need to be Done for LPR2:
+
+SCOPE: To start, focus on constructors and append functions for datastructures before moving on
+to gdb and memcheck tasks given for lpr2. If done and all tools/goals are accomplished, implement the last 3 functions for Lpr1
+
+
+Support profiling: add -pg flags to 
+                   add target to run gprof on main and put output in 
+
+Edit the existing coverage target to take the terminal output and put at top of .txt file:
+  -should look like: gcov -src.c > filename.txt
+                     cat rsc.c.gcov >> filename.txt
