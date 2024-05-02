@@ -43,7 +43,7 @@ coverage: main tests
 
 profile: main
 	./main
-	gprof ./main -b > main_gprof.txt
+	gprof -b ./main gmon.out> main_gprof.txt
 
 memcheck: main tests
 	valgrind --tool=memcheck --leak-check=yes --log-file=memcheckMain.txt ./main
